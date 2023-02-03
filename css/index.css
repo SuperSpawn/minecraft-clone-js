@@ -1,0 +1,29 @@
+
+
+
+
+
+.container {
+    max-width: 2000px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../assets/dirt.png');
+}
+.container .menu-button {
+    padding: 1rem 5rem;
+    background-image: url('../assets/stone.png');
+    color: white;
+    border: 1px solid black;
+
+    font-size: 3rem;
+}
+.container .menu-button:hover {
+    cursor: pointer;
+}
+
+
