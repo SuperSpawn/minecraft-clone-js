@@ -1,10 +1,66 @@
 
+body {
+    background-image: url('../assets/stone.png');
+}
 
 
+#block-grid {
+    background-color: aqua;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.block {
+    width: 4rem;
+    height: 4rem;
+}
+.block:hover {
+    border: 1px solid yellow;
+    margin: -1px;
+}
 
 
+#tool-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#tool-bar > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 227, 196, 0.5);
+}
+#tool-bar > div {
+    border: 2px solid grey;
+    width: 4rem;
+    height: 4rem;
+}
+#tool-bar > div:hover {
+    border: 2px solid grey;
+}
 
 
+#hotbar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+#hotbar .slot {
+    border: 2px solid grey;
+    width: 4rem;
+    height: 4rem;
+}
+#hotbar .slot:hover {
+    border: 2px solid #333;
+}
 
 
 

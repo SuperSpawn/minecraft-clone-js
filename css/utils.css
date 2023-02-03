@@ -4,3 +4,22 @@
     display: none;
 }
 
+.pickaxe {
+    
+}
+
+
+
+
+
+
+
+.empty {
+    background-color: rgba(0, 0, 0, 0);
+}
+.dirt {
+    background-image: url('../assets/dirt.png');
+}
+
+
+
