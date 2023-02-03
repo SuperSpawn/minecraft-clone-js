@@ -65,7 +65,7 @@ function addBlockButtons() {
 loadEmptyTemplate(screen.width, screen.height);
 addBlockButtons();
 
-function updateScreen(); 
+// function updateScreen()  
 
 
 
