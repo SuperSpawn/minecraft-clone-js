@@ -9,5 +9,5 @@ normal.addEventListener('click', function(e) {
 });
 creative.addEventListener('click', function(e) {
     localStorage.setItem('creative', 'true');
-    window.location = '../html/game.html';
+    window.location = './html/game.html';
 });
