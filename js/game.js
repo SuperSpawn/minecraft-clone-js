@@ -101,7 +101,12 @@ function loadRandomWorld(width, height,
         let levelLength = levelLengthMin + getRandomInt(levelLengthMax - levelLengthMin); 
         levelLength += i;
         while((i < levelLength) && (i < width)) {
-            setSlotAt(i, startBlock, 'grass');
+            if(startBlock === maxGround) {
+                setSlotAt(i, startBlock, 'water');
+            }
+            else
+                setSlotAt(i, startBlock, 'grass');
+            
             let dirtDepth = dirtMinDepth + getRandomInt(dirtMaxDepth - dirtMinDepth);
             for(j = 1; j < dirtDepth; ++j) {
                 setSlotAt(i, startBlock + j, 'dirt');
@@ -306,7 +311,7 @@ function addHotBarButtons() {
 loadRandomWorld(100,100,
     12, 8,
     0.01,
-    2, 5, 2, 4, 1, 2);
+    4, 10, 2, 4, 1, 2);
 
 
 addBlockButtons();
