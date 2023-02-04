@@ -1,8 +1,7 @@
 
 body {
-    background-image: url('../assets/stone.png');
+    width: fit-content;
 }
-
 
 #block-grid {
     background-color: aqua;
@@ -14,12 +13,12 @@ body {
 }
 .block {
     width: 4rem;
-    height: 3rem;
+    height: 4rem;
     background-size: contain;
 }
 .block:hover {
-    border: 1px solid yellow;
-    margin: -1px;
+    border: 2px solid yellow;
+    margin: -2px;
 }
 
 

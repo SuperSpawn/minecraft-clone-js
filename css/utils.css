@@ -26,17 +26,22 @@
     background-size: contain;
     background-color: white;
 }
-.bucket {
-    background-image: url('../assets/bucket1.jpg');
-    background-size: contain;
-    background-color: white;
-}
 .shears {
     background-image: url('../assets/shears.png');
     background-size: contain;
     background-color: white;;
 }
 
+.bucket {
+    background-image: url('../assets/bucket1.jpg');
+    background-size: contain;
+    background-color: white;
+}
+.bucket-water {
+    background-image: url('../assets/bucket2.jpg');
+    background-size: contain;
+    background-color: white;
+}
 
 
 
