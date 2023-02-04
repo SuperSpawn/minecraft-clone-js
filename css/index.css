@@ -12,11 +12,13 @@
     justify-content: center;
     align-items: center;
 
-    background-image: url('../assets/dirt.png');
+    gap: 1rem;
+
+    background-image: url('../assets/dirt.jpg');
 }
 .container .menu-button {
     padding: 1rem 5rem;
-    background-image: url('../assets/stone.png');
+    background-image: url('../assets/stone.jpg');
     color: white;
     border: 1px solid black;
 

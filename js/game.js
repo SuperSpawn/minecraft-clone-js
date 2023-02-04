@@ -1,5 +1,6 @@
 
-let creativeMode = false;
+let creativeMode = (localStorage.getItem('creative') == 'true') ? true : false;
+
 
 let selectedObject = 0;
 let selectedMode = 'tool';
