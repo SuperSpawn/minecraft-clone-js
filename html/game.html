@@ -17,18 +17,21 @@
 
 </head>
 <body>
-    <div id="block-grid">
-        <div>...</div>
-    </div>
+    <div id="block-grid"></div>
     <div id="tools-bar">
-        <div class="pickaxe"></div>
-        <div class="shovel"></div>
-        <div class="axe"></div>
-        <div class="bucket"></div>
-        <div class="shears"></div>
+        <div tool-type="pickaxe" class="selected pickaxe"></div>
+        <div tool-type="shovel" class="unselected shovel"></div>
+        <div tool-type="axe" class="unselected axe"></div>
+        <div tool-type="bucket" class="unselected bucket"></div>
+        <div tool-type="shears" class="unselected shears"></div>
     </div>
-    <div id="hotbar">
-
+    <div id="hot-bar">
+        <div block-type="dirt" class="unselected slot dirt">0</div>
+        <div block-type="grass" class="unselected slot grass">0</div>
+        <div block-type="cobblestone" class="unselected slot cobblestone">0</div>
+        <div block-type="stone" class="unselected slot stone">0</div>
+        <div block-type="log" class="unselected slot log">0</div> 
+        <div block-type="leaf" class="unselected slot leaf">0</div>
     </div>
 </body>
 </html>

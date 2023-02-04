@@ -3,15 +3,39 @@
 .hidden {
     display: none;
 }
-
-
-
-.pickaxe {
-    
+.unselected {
+    border: 2px solid grey;
+}
+.selected {
+    border: 2px solid yellow;
 }
 
 
 
+
+.pickaxe {
+    background-image: url('../assets/pickaxe.jpg');
+    background-size: contain;
+}   
+.shovel {
+    background-image: url('../assets/shovel.png');
+    background-size: contain;
+}
+.axe {
+    background-image: url('../assets/axe.jpg');
+    background-size: contain;
+    background-color: white;
+}
+.bucket {
+    background-image: url('../assets/bucket1.jpg');
+    background-size: contain;
+    background-color: white;
+}
+.shears {
+    background-image: url('../assets/shears.png');
+    background-size: contain;
+    background-color: white;;
+}
 
 
 
@@ -20,8 +44,33 @@
     background-color: rgba(0, 0, 0, 0);
 }
 .dirt {
-    background-image: url('../assets/dirt.png');
+    background-image: url('../assets/dirt.jpg');
+}
+.grass {
+    background-image: url('../assets/grass.jpg');
+}
+.cobblestone {
+    background-image: url('../assets/cobblestone.jpg');
+}
+.stone {
+    background-image: url('../assets/stone.jpg');
+}
+.log {
+    background-image: url('../assets/log.jpg');
+}
+.leaf {
+    background-image: url('../assets/leaf.jpg');
+}
+.bedrock {
+    background-image: url('../assets/bedrock.png');
 }
 
 
 
+.water {
+    background-image: url('../assets/water.png');
+}
+.water-1 {
+    background-image: url('../assets/water.png') no-repeat;
+    background-size: 100% 3rem;
+}

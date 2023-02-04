@@ -14,7 +14,8 @@ body {
 }
 .block {
     width: 4rem;
-    height: 4rem;
+    height: 3rem;
+    background-size: contain;
 }
 .block:hover {
     border: 1px solid yellow;
@@ -35,29 +36,41 @@ body {
     gap: 0.1rem;
 }
 #tools-bar > div {
-    border: 2px solid grey;
     width: 4rem;
     height: 4rem;
 }
 #tools-bar > div:hover {
-    border: 2px solid grey;
+    cursor: pointer;
 }
 
 
-#hotbar {
+
+#hot-bar {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.2rem;
     justify-content: center;
     align-items: center;
+
 }
-#hotbar .slot {
-    border: 2px solid grey;
+#hot-bar .slot {
     width: 4rem;
     height: 4rem;
+
+    font-size: 2rem;
+    text-align: center;
+
+    color: white;
+
+    background-size: contain;
 }
-#hotbar .slot:hover {
-    border: 2px solid #333;
+#hot-bar .slot:hover {
+    cursor: pointer;
 }
 
 
