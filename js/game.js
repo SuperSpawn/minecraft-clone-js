@@ -84,32 +84,38 @@ function setSlotAt(x, y, type) {
     slot.classList.add(type);
 }
 function loadRandomWorld(width, height,
-     maxGround, minGround,
-      intensity,
-       dirtMinDepth, dirtMaxDepth) {
+        maxGround, minGround,
+        intensity,
+        dirtMinDepth, dirtMaxDepth,
+        levelLengthMin, levelLengthMax,
+        levelDepthMin, levelDepthMax) {
 
     loadEmptyTemplate(width, height);
 
     let treePos = 4 + getRandomInt(width - 5);
 
-
-    let noise = sineNoise();
     let startBlock = minGround + getRandomInt(maxGround - minGround);
     let i, j;
 
     for(i = 0; i < width; ++i) {
-        setSlotAt(i, startBlock, 'grass');
-        let dirtDepth = dirtMinDepth + getRandomInt(dirtMaxDepth - dirtMinDepth);
-        for(j = 1; j < dirtDepth; ++j) {
-            setSlotAt(i, startBlock + j, 'dirt');
+        let levelLength = levelLengthMin + getRandomInt(levelLengthMax - levelLengthMin); 
+        levelLength += i;
+        while((i < levelLength) && (i < width)) {
+            setSlotAt(i, startBlock, 'grass');
+            let dirtDepth = dirtMinDepth + getRandomInt(dirtMaxDepth - dirtMinDepth);
+            for(j = 1; j < dirtDepth; ++j) {
+                setSlotAt(i, startBlock + j, 'dirt');
+            }
+            while(startBlock + j < height) {
+                setSlotAt(i, startBlock + j, 'stone');
+                ++j;
+            }
+            ++i;
         }
-        while(startBlock + j < height) {
-            setSlotAt(i, startBlock + j, 'stone');
-            ++j;
-        }
+        --i;
 
 
-        startBlock = sineNoise(startBlock, intensity);
+        startBlock += levelDepthMin + getRandomInt(levelDepthMax - levelDepthMin);
         if(startBlock > maxGround){
             startBlock = maxGround - getRandomInt(4);
         }
@@ -296,7 +302,7 @@ function addHotBarButtons() {
 loadRandomWorld(100,100,
     8, 12,
     0.01,
-    2, 5);
+    2, 5, 2, 4, 1, 2);
 addBlockButtons();
 addHotBarButtons();
 addToolBarButtons();
