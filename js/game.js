@@ -45,8 +45,8 @@ function loadEmptyTemplate(width, height) {
         for(j = 0; j < width; ++j) {
             let div = document.createElement('div');
             div.classList.add('block');
-            div.classList.add('dirt');
-            div.setAttribute('block-type', 'dirt');
+            div.classList.add('empty');
+            div.setAttribute('block-type', 'empty');
             div.setAttribute('row', j);
             children.appendChild(div);
         }
@@ -303,12 +303,11 @@ function addHotBarButtons() {
 }
 
 
-// loadRandomWorld(100,100,
-//     12, 8,
-//     0.01,
-//     2, 5, 2, 4, 1, 2);
+loadRandomWorld(100,100,
+    12, 8,
+    0.01,
+    2, 5, 2, 4, 1, 2);
 
-loadEmptyTemplate(100, 100);
 
 addBlockButtons();
 addHotBarButtons();
