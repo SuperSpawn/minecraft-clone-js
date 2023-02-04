@@ -1,5 +1,5 @@
 
-let creativeMode = true;
+let creativeMode = false;
 
 let selectedObject = 0;
 let selectedMode = 'tool';
@@ -115,12 +115,13 @@ function loadRandomWorld(width, height,
         --i;
 
 
-        startBlock += levelDepthMin + getRandomInt(levelDepthMax - levelDepthMin);
+        startBlock += (getRandomInt(levelDepthMax) - levelDepthMin);
+        startBlock -= (getRandomInt(levelDepthMax) - levelDepthMin);
         if(startBlock > maxGround){
-            startBlock = maxGround - getRandomInt(4);
+            startBlock = maxGround - getRandomInt(levelDepthMin);;
         }
         if(startBlock < minGround) {
-            startBlock = minGround + getRandomInt(4);
+            startBlock = minGround + getRandomInt(levelDepthMin);
         }
     }
 
@@ -182,7 +183,7 @@ function interactWithTool(slot) {
     if(tools[toolType].includes(blockType) === false) return;
 
     //add block to inventory
-    if(creativeMode === true) {
+    if(creativeMode === false) {
         let i = getTypeFromInventory(blockType);
         ++i;
         setTypeFromInventory(blockType, i);
@@ -300,7 +301,7 @@ function addHotBarButtons() {
 
 
 loadRandomWorld(100,100,
-    8, 12,
+    12, 8,
     0.01,
     2, 5, 2, 4, 1, 2);
 addBlockButtons();
